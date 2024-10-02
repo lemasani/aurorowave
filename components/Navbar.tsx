@@ -10,7 +10,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-primary text-white py-4 fixed w-full top-0 z-50 shadow-md">
+    <nav className="bg-primary text-white py-8 fixed w-full top-0 z-50 shadow-md">
       <div className="container mx-auto px-4 flex justify-between items-center">
         <h1 className="text-xl font-bold cursor-pointer" onClick={() => scrollToSection("hero")}>
           AURORAWAVE LABS

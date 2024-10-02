@@ -2,7 +2,7 @@ import React from "react";
 
 const VisionMission = () => {
   return (
-    <section className="py-20 bg-lightGray">
+    <section className="py-20">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-primary mb-4">Our Vision & Mission</h2>
         <p className="text-gray-700 mb-4">Vision: We envision AURORAWAVE LABS as the premier provider of transformative software solutions in Tanzania.</p>

@@ -19,8 +19,7 @@ const config: Config = {
   			sm: 'calc(var(--radius) - 4px)'
   		},
 		  fontFamily: {
-			sans: ["Inter", "sans-serif"],
-			serif: ["Roboto", "serif"],
+			sans: ['Montserrat', 'sans-serif'],
 		  },
   		colors: {
   			background: 'hsl(var(--background))',

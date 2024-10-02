@@ -1,4 +1,5 @@
 import About from "@/components/About";
+import BackgroundShapes from "@/components/BackgroundShapes";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import Team from "@/components/Team";
@@ -7,7 +8,8 @@ import VisionMission from "@/components/VisionMIssion";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col">
+    <main className="relative overflow-hidden flex min-h-screen flex-col">
+        <BackgroundShapes />
         <section id="hero">
           <Hero />
         </section>
