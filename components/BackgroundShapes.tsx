@@ -8,23 +8,32 @@ const BackgroundShapes = () => {
       {/* Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary via-gray-800 to-black opacity-80"></div>
 
-      {/* Large Circle Top-Left */}
-      <motion.svg
-        width="300"
-        height="300"
-        className="absolute top-[-50px] left-[-50px] opacity-80"
-        xmlns="http://www.w3.org/2000/svg"
-        animate={{ rotate: 360 }}
-        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-      >
-        <circle cx="150" cy="150" r="150" fill="url(#grad1)" />
-        <defs>
-          <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style={{ stopColor: "#F97316", stopOpacity: 1 }} />
-            <stop offset="100%" style={{ stopColor: "#1F2937", stopOpacity: 1 }} />
-          </linearGradient>
-        </defs>
-      </motion.svg>
+      {/* Double Layer Hexagon Top-Left */}
+     {/* Double Layer Hexagon Top-Left */}
+<motion.svg
+  width="300"
+  height="300"
+  className="absolute top-[-50px] left-[-50px] opacity-80"
+  xmlns="http://www.w3.org/2000/svg"
+  animate={{ rotate: 360 }}
+  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+>
+  <polygon points="150,50 250,100 250,200 150,250 50,200 50,100" fill="url(#grad1)" />
+  <motion.polygon
+    points="150,0 300,75 300,225 150,300 0,225 0,75"
+    fill="none"
+    stroke="url(#grad1)"
+    strokeWidth="10"
+    animate={{ rotate: -360 }}
+    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+  />
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style={{ stopColor: "#F97316", stopOpacity: 1 }} />
+      <stop offset="100%" style={{ stopColor: "#1F2937", stopOpacity: 1 }} />
+    </linearGradient>
+  </defs>
+</motion.svg>
 
       {/* Abstract Wave Pattern */}
       <motion.svg
