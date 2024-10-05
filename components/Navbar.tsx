@@ -1,11 +1,19 @@
 'use client'
-import React from "react";
+import React, { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
+      setIsOpen(false); // Close the menu after clicking a link
     }
   };
 
@@ -15,7 +23,7 @@ const Navbar = () => {
         <h1 className="text-xl font-bold cursor-pointer" onClick={() => scrollToSection("hero")}>
           AURORAWAVE LABS
         </h1>
-        <ul className="flex space-x-6">
+        <div className="hidden md:flex space-x-6 list-none">
           <li className="cursor-pointer hover:text-secondary" onClick={() => scrollToSection("about")}>
             About
           </li>
@@ -28,14 +36,35 @@ const Navbar = () => {
           <li className="cursor-pointer hover:text-secondary" onClick={() => scrollToSection("team")}>
             Team
           </li>
-          <li className="cursor-pointer hover:text-secondary" onClick={() => scrollToSection("values")}>
-            Values
+          <li className="cursor-pointer hover:text-secondary" onClick={() => scrollToSection("contact")}>
+            Contact
+          </li>
+        </div>
+        <div className="md:hidden">
+          <button onClick={toggleMenu} className="text-2xl">
+            {isOpen ? <FaTimes /> : <FaBars />}
+          </button>
+        </div>
+      </div>
+      {isOpen && (
+        <div className="md:hidden flex flex-col items-center space-y-4 mt-4">
+          <li className="cursor-pointer hover:text-secondary" onClick={() => scrollToSection("about")}>
+            About
+          </li>
+          <li className="cursor-pointer hover:text-secondary" onClick={() => scrollToSection("visionMission")}>
+            Vision & Mission
+          </li>
+          <li className="cursor-pointer hover:text-secondary" onClick={() => scrollToSection("services")}>
+            Services
+          </li>
+          <li className="cursor-pointer hover:text-secondary" onClick={() => scrollToSection("team")}>
+            Team
           </li>
           <li className="cursor-pointer hover:text-secondary" onClick={() => scrollToSection("contact")}>
             Contact
           </li>
-        </ul>
-      </div>
+        </div>
+      )}
     </nav>
   );
 };
