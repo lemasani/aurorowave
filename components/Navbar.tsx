@@ -47,7 +47,7 @@ const Navbar = () => {
         </div>
       </div>
       {isOpen && (
-        <div className="md:hidden flex flex-col items-center space-y-4 mt-4">
+        <div className="md:hidden flex flex-col items-center space-y-4 mt-4 list-none">
           <li className="cursor-pointer hover:text-secondary" onClick={() => scrollToSection("about")}>
             About
           </li>

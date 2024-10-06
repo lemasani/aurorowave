@@ -20,7 +20,7 @@ const Hero = () => {
       </div>
 
       {/* Decorative Shape */}
-      <div className="absolute top-20 right-10">
+      <div className="absolute top-20 right-10 -z-10">
         <div className="w-40 h-40 bg-gradient-to-r from-orange-400 to-orange-600 transform rotate-45 rounded-lg shadow-xl"></div>
       </div>
 
