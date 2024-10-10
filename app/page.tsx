@@ -4,7 +4,6 @@ import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import Team from "@/components/Team";
 import Values from "@/components/Values";
-import VisionMission from "@/components/VisionMIssion";
 
 export default function Home() {
   return (
@@ -15,9 +14,6 @@ export default function Home() {
         </section>
         <section id="about">
           <About />
-        </section>
-        <section id="visionMission">
-          <VisionMission />
         </section>
         <section id="services">
           <Services />

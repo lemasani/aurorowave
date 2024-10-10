@@ -27,9 +27,6 @@ const Navbar = () => {
           <li className="cursor-pointer hover:text-secondary" onClick={() => scrollToSection("about")}>
             About
           </li>
-          <li className="cursor-pointer hover:text-secondary" onClick={() => scrollToSection("visionMission")}>
-            Vision & Mission
-          </li>
           <li className="cursor-pointer hover:text-secondary" onClick={() => scrollToSection("services")}>
             Services
           </li>
@@ -50,9 +47,6 @@ const Navbar = () => {
         <div className="md:hidden flex flex-col items-center space-y-4 mt-4 list-none">
           <li className="cursor-pointer hover:text-secondary" onClick={() => scrollToSection("about")}>
             About
-          </li>
-          <li className="cursor-pointer hover:text-secondary" onClick={() => scrollToSection("visionMission")}>
-            Vision & Mission
           </li>
           <li className="cursor-pointer hover:text-secondary" onClick={() => scrollToSection("services")}>
             Services

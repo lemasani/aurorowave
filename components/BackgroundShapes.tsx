@@ -33,7 +33,7 @@ const BackgroundShapes = () => {
 
       {/* Small Dot Grid Pattern */}
       <svg
-        className="absolute top-[40%] left-[80%] transform -translate-x-1/2 -translate-y-1/2 opacity-40"
+        className="absolute top-[40%] left-[10%] transform -translate-x-1/2 -translate-y-1/2 opacity-40"
         width="500"
         height="400"
         viewBox="0 0 100 100"
